@@ -25,35 +25,14 @@ const ExpenseForm = (props) => {
       price: enteredAmount,
     };
     props.onSubmitForm(expenseData);
+    props.onCancelForm();
     setEnteredTitle("");
     setEnteredDate("");
     setEnteredAmount("");
   };
-  // Single state Object approach
-  /*
-  const [userInput, setUserInput] = useState({
-    enteredTitle: "",
-    enteredAmount: "",
-    enteredDate: "",
-  });
-
-  const titleChangeHandler = (event) => {
-    setUserInput((prevState) => {
-      return { ...prevState, enteredTitle: event.target.value };
-    });
+  const cancelFormHandler = () => {
+    props.onCancelForm();
   };
-  const amountChangeHandler = (event) => {
-    setUserInput((prevState) => {
-      return { ...prevState, enteredAmount: event.target.value };
-    });
-  };
-  
-  const dateChangeHandler = (event) =>{
-    setUserInput((prevState) => {
-        return {...prevState, enteredDate: event.target.value};
-    });
-  };
-  */
   return (
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
@@ -87,6 +66,7 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={cancelFormHandler}>Cancel</button>
         <button type="submit">Add expense</button>
       </div>
     </form>
