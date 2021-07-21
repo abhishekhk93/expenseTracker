@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Card from "../UI/Card";
-import ExpenseItem from "./ExpenseItem";
+import ExpenseList from "./ExpenseList";
 import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter";
 import React from "react";
@@ -18,22 +18,11 @@ const Expenses = (props) => {
     );
   }
   
-  let expressContent = <p className="empty_card"> No expenses found </p>;
-  if(filteredArr.length > 0){
-    expressContent =   filteredArr.map((expense) => (
-      <ExpenseItem
-        key={expense.id}
-        title={expense.title}
-        date={expense.date}
-        price={expense.price}
-      />
-    ));
-  }
   return (
     <div>
       <Card class="expenses">
         <ExpensesFilter selected={selectedYear} onFilter={onFilterHandler} />
-        {expressContent}
+        <ExpenseList items={filteredArr}/>
       </Card>
     </div>
   );

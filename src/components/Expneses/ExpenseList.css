@@ -1,0 +1,7 @@
+.expense-list__empty{
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    font: inherit;
+    font-weight: bold;
+    font-size: 20px;
+}
