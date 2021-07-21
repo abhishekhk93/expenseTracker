@@ -1,5 +1,6 @@
 import './NewExpense.css';
 import ExpenseForm from './ExpenseForm';
+import React from "react";
 
 const NewExpense = (props) => {
     const submitFormHandler = (expenseData) => {

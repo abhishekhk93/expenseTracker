@@ -1,6 +1,7 @@
 import Card from "../UI/Card";
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
+import React from "react";
 
 const ExpenseItem = (props) => {
   const unit = " /-";

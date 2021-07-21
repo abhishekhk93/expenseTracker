@@ -1,4 +1,5 @@
 import "./ExpenseDate.css";
+import React from "react";
 
 const ExpenseDate = (props) => {
   const year = props.date.getFullYear();
@@ -12,5 +13,5 @@ const ExpenseDate = (props) => {
     </div>
   );
 }
-
+ 
 export default ExpenseDate;

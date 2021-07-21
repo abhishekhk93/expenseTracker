@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter";
+import React from "react";
 
 const Expenses = (props) => {
   const expenses = props.expenses;
